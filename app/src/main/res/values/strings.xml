@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Notation Chords &amp; Lyrics</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--My Strings-->
+
+
+    <string name="email">Email</string>
+    <string name="notes">Notes</string>
+    <string name="register">Register</string>
+    <string name="login">Log In</string>
+    <string name="emailHint">Your Email</string>
+    <string name="ph_email">johnd@gmail.com</string>
+    <string name="passwordHint">Password</string>
+    <string name="ph_username">John Doe</string>
+    <string name="ph_password">********</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
+    <string name="notehint">Your Note</string>
+    <string name="username">Username</string>
+    <string name="prescription">Prescription</string>
+    <string name="handson">Hands On</string>
+    <string name="edit">Edit</string>
+    <string name="prestext">Add/Delete/View Prescriptions</string>
+    <string name="hoText">Pills on Your Hands</string>
+    <string name="edtitext">Edit Your Prescription</string>
+    <string name="title_activity_prescription">PrescriptionActivity</string>
+    <string name="pillname">Name</string>
+    <string name="time">Time</string>
+    <string name="type">Type</string>
+    <string name="qty">Quantity</string>
+    <string name="note">Note</string>
+    <string name="add">Add</string>
+    <string name="lblLogin">Log In</string>
+    <string name="lblReg">Sign Up</string>
+    <string name="lblLNotaMember">Not a member yet?</string>
+    <string name="lblSignup">Sign Up</string>
+    <string name="lblConfPass">Confirm Password</string>
+    <string name="title_activity_view_profile">ViewProfileActivity</string>
+    <string name="conlvl">Contribution Level</string>
+    <string name="ph_conlvl">Your Contribution</string>
+    <string name="lblSaveChanges">Save Changes</string>
+    <string name="lblcurPass">Current Password</string>
+    <string name="lblnewPass">New Password</string>
+    <string name="title_activity_edit_post">EditPostActivity</string>
+</resources>

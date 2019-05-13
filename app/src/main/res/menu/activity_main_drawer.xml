@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_collection"
+            android:icon="@drawable/ic_music_player"
+            android:title="Collection" />
+        <item
+            android:id="@+id/nav_notations"
+            android:icon="@drawable/ic_musical_notation_of_music_class"
+            android:title="Notations" />
+        <item
+            android:id="@+id/nav_chords"
+            android:icon="@drawable/ic_acoustic_guitar"
+            android:title="Chords" />
+        <item
+            android:id="@+id/nav_lyrics"
+            android:icon="@drawable/ic_mike"
+            android:title="Lyrics" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_arrow"
+            android:title="Logout"
+            android:enabled="true"/>
+    </group>
+
+    <item android:title="Customize">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_work_tool"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share App" />
+            <item
+                android:id="@+id/nav_aboutme"
+                android:icon="@drawable/ic_menu_send"
+                android:title="About Me" />
+        </menu>
+    </item>
+
+</menu>

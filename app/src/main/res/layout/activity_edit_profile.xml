@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:orientation="vertical"
+    android:background="@drawable/layoutbgb">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        >
+
+        <com.industrialmaster.notationchordslyrics.CustomNetworkImageView
+            android:id="@+id/editProfPic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/user"
+            android:elevation="20dp"
+            android:clickable="true"
+            android:onClick="selectImg"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_marginTop="10dp"
+
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/username"
+            android:textColor="@color/colorTextIcons"
+
+            android:gravity="bottom"
+
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/etEditUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="0dp"
+            android:elevation="10dp"
+            android:hint="@string/ph_username"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/colorTextIcons"
+            android:textColorHint="#bdc2cc"
+            android:textSize="25sp"
+            android:gravity="top"
+
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/colorDivider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            ></View>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/email"
+            android:textColor="@color/colorTextIcons"
+
+            android:gravity="bottom"
+
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/etEditEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="0dp"
+            android:elevation="10dp"
+            android:hint="@string/emailHint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/colorTextIcons"
+            android:textColorHint="#bdc2cc"
+            android:textSize="25sp"
+            android:gravity="top"
+
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/colorDivider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            ></View>
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/lblcurPass"
+            android:textColor="@color/colorTextIcons"
+
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etCurPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="0dp"
+            android:elevation="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="@string/passwordHint"
+
+            android:textColor="@color/colorTextIcons"
+            android:textColorHint="#bdc2cc"
+            android:textSize="25sp"
+            android:gravity="top"
+            android:password="true"
+
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/colorDivider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            ></View>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblnewPass"
+            android:textColor="@color/colorTextIcons"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="bottom"
+
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/etNewPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="0dp"
+            android:elevation="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Password"
+
+            android:textColor="@color/colorTextIcons"
+            android:textColorHint="#bdc2cc"
+            android:textSize="25sp"
+            android:gravity="top"
+            android:password="true"
+
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/colorDivider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            ></View>
+    </LinearLayout>
+
+
+
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/btnroundwhite"
+        android:textSize="20sp"
+        android:elevation="20dp"
+        android:text="@string/lblSaveChanges"
+        android:textColor="@color/colorPurple"
+        android:onClick="saveChanges"
+
+        />
+
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.6"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingBottom="25dp"-->
+    <!--&gt;-->
+
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.75"-->
+    <!--android:paddingTop="25dp"-->
+    <!--android:text="Already a member?"-->
+    <!--android:textSize="20sp"-->
+    <!--android:textColor="@color/colorTextIcons"-->
+    <!--android:textAlignment="center"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:gravity="bottom"-->
+    <!--android:paddingBottom="10dp"-->
+
+
+
+
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="10dp"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginTop="0dp"-->
+    <!--android:layout_marginRight="50dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:background="@drawable/btnround"-->
+
+    <!--android:elevation="20dp"-->
+    <!--android:text="@string/lblLogin"-->
+    <!--android:textColor="@color/colorTextIcons"-->
+    <!--android:textSize="20sp"-->
+    <!--android:onClick="login"-->
+
+
+    <!--/>-->
+
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

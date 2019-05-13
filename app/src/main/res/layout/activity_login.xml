@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/layoutbgb"
+    >
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:src="@drawable/logoa"-->
+        <!--android:layout_margin="20dp"/>-->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:text="@string/lblLogin"
+        android:textColor="@color/colorTextIcons"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:padding="20dp"
+
+        android:textSize="35sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/email"
+            android:textColor="@color/colorTextIcons"
+
+            android:gravity="bottom"
+
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="0dp"
+            android:elevation="10dp"
+            android:hint="@string/emailHint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/colorTextIcons"
+            android:textColorHint="#bdc2cc"
+            android:textSize="25sp"
+            android:gravity="top"
+
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/colorDivider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            ></View>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="@color/colorTextIcons"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="bottom"
+
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="0dp"
+            android:elevation="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="@string/passwordHint"
+
+            android:textColor="@color/colorTextIcons"
+            android:textColorHint="#bdc2cc"
+            android:textSize="25sp"
+            android:gravity="top"
+            android:password="true"
+
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/colorDivider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            ></View>
+    </LinearLayout>
+
+
+
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="50dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/btnroundwhite"
+        android:textSize="20sp"
+        android:elevation="20dp"
+        android:text="@string/login"
+        android:textColor="@color/colorPurple"
+        android:onClick="login"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:paddingTop="25dp"
+            android:text="@string/lblLNotaMember"
+            android:textSize="20sp"
+            android:textColor="@color/colorTextIcons"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+
+
+
+
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="0.10"
+            android:background="@drawable/btnround"
+
+            android:elevation="20dp"
+            android:text="@string/lblSignup"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="20sp"
+            android:onClick="register"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
