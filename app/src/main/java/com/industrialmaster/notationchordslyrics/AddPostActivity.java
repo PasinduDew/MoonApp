@@ -130,11 +130,13 @@ public class AddPostActivity extends AppCompatActivity {
                 Uri contentURI = data.getData();
                 try {
 
+                    cnivAdd.setBackgroundResource(0);
+
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
 
                     cnivAdd.setLocalImageBitmap(bitmap);
-                    Toast.makeText(getApplication(), "Image Selected", Toast.LENGTH_SHORT).show();
-                    lock = 1;
+//                    Toast.makeText(getApplication(), "Image Selected", Toast.LENGTH_SHORT).show();
+//                    lock = 1;
 
                 } catch (IOException e) {
                     e.printStackTrace();

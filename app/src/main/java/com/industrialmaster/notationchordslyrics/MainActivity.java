@@ -143,9 +143,9 @@ public class MainActivity extends AppCompatActivity
                 super.onDrawerOpened(drawerView);
 //                Toast.makeText(getApplicationContext(), "I`m Here", Toast.LENGTH_SHORT).show();
                 TextView navUsername = (TextView) findViewById(R.id.nav_username);
-                navUsername.setText(sharedPref.getUsername().toString());
-                TextView navEmail = (TextView) findViewById(R.id.nav_email);
-                navEmail.setText(sharedPref.getEmail().toString());
+                navUsername.setText("Hi! " + sharedPref.getUsername().toString());
+//                TextView navEmail = (TextView) findViewById(R.id.nav_email);
+//                navEmail.setText(sharedPref.getEmail().toString());
                 nav_userImg = (CircularNetworkImageView) findViewById(R.id.nav_userImg);
 
                 anim = (AnimationDrawable) nav_userImg.getBackground();
@@ -202,7 +202,10 @@ public class MainActivity extends AppCompatActivity
             actvSearch.setVisibility(View.GONE);
             tvMoon.setVisibility(View.VISIBLE);
             btnSearchState = false;
-            onResume();
+            if (!(actvSearch.getText().toString().equals(""))) {
+                onResume();
+            }
+
         }
         else {
             actvSearch.setVisibility(View.VISIBLE);
@@ -219,12 +222,26 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
 //                    Toast.makeText(MainActivity.this, s.toString(), Toast.LENGTH_SHORT).show();
+                    if (!(actvSearch.getText().toString().equals(""))){
+
+                        searchBySongName(s.toString());
+                    }
 
                 }
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    searchBySongName(s.toString());
+
+                    if (actvSearch.getText().toString().equals("")){
+
+                        onResume();
+                    }
+                    else {
+
+                        searchBySongName(s.toString());
+                    }
+
+
                 }
             });
 
@@ -245,20 +262,21 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onResponse(String response) {
 
+                        String tempStr = actvSearch.getText().toString();
 
+                        if (response.equals("[]") && !(tempStr.equals(""))){
+//                            Toast.makeText(MainActivity.this, "No Matching Found!", Toast.LENGTH_SHORT).show();
+                            listView.setVisibility(View.GONE);
+//                            onResume();
 
-                        if (response.equals("[]")){
-                            Toast.makeText(MainActivity.this, "*******", Toast.LENGTH_LONG).show();
+                        }
+                        else if (response.equals("[]") && tempStr.equals("")){
+//                            Toast.makeText(MainActivity.this, "Second Part", Toast.LENGTH_SHORT).show();
                             onResume();
 
                         }
-                        else if (response.equals("[]") && songname.equals("")){
-
-
-
-                        }
                         else {
-
+                            listView.setVisibility(View.VISIBLE);
                             try {
 
                                 JSONArray jsonArray = new JSONArray(response);
@@ -371,7 +389,7 @@ public class MainActivity extends AppCompatActivity
 
         String url = "http://pasindud.tk/myapp/posts/list.php";
 
-        showSimpleProgressDialog(this, "Loading...","Fetching Json",false);
+        showSimpleProgressDialog(this, "","Loading...",false);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -438,6 +456,16 @@ public class MainActivity extends AppCompatActivity
                                 else{
 
                                 }
+
+//                                if (category.equals("Notation")){
+//                                    ivCategory
+//                                }
+//                                else if (category.equals("Chords")){
+//                                    ivCategory.setImageResource(R.drawable.chords);
+//                                }
+//                                else if (category.equals("Lyrics")){
+//                                    ivCategory.setImageResource(R.drawable.lyrics);
+//                                }
 
 //                                postModel.setImgURL(dataobj.getString("imgurl"));
 
@@ -1006,7 +1034,7 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
 
-
+        listView.setVisibility(View.VISIBLE);
 
         switch (menuItem){
             case 0 : retrieveAll();

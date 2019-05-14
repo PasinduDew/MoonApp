@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="225dp"
             android:orientation="vertical"
-            android:background="@drawable/side_nav_bar">
+            android:background="#FF000000">
 
             <com.industrialmaster.notationchordslyrics.CircularNetworkImageView
                 android:id="@+id/profPic"
@@ -80,8 +80,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/colorDivider"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
 
 
                         ></View>
@@ -118,8 +118,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/colorDivider"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
 
 
                         ></View>
@@ -156,8 +156,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/colorDivider"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
 
 
                         ></View>

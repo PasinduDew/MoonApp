@@ -1,6 +1,8 @@
 package com.industrialmaster.notationchordslyrics;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.FloatingActionButton;
@@ -54,6 +56,8 @@ public class ViewPostActivity extends AppCompatActivity {
 
     int tempLike, tempDislike;
     boolean btnLiked, btnDisliked, btnState;
+
+    Bitmap bitmap;
 
 
     SharedPref sharedPref;
@@ -114,7 +118,7 @@ public class ViewPostActivity extends AppCompatActivity {
         tvNote.setText(note);
 
         if (category.equals("Notation")){
-            ivCategory.setImageResource(R.drawable.notation);
+            ivCategory.setImageResource(R.drawable.notaion_svg);
         }
         else if (category.equals("Chords")){
             ivCategory.setImageResource(R.drawable.chords);
@@ -135,6 +139,7 @@ public class ViewPostActivity extends AppCompatActivity {
                         .ic_dialog_alert));
         cnivContent.setImageUrl(url, mImageLoader);
         anim.stop();
+
 
 
 
@@ -388,11 +393,17 @@ public class ViewPostActivity extends AppCompatActivity {
 
     }
 
+    public void viewImage(View v){
+
+        Intent intent = new Intent(getApplicationContext(), ViewImageActivity.class);
+
+        intent.putExtra("imageUrl", imageUrl);
+
+        startActivity(intent);
 
 
 
-
-
+    }
 
     public void clickedLike(View v){
 

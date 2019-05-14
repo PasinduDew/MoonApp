@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ViewPostActivity"
     android:orientation="vertical"
-    android:background="@drawable/layoutbg"
+    android:background="@color/colorBluebg"
     >
 
 
@@ -76,6 +76,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_gravity="center"
+            android:onClick="viewImage"
             android:src="@drawable/loading_animation"/>
     </LinearLayout>
 

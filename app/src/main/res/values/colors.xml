@@ -15,6 +15,8 @@
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="color">#FFCDD2</color>
+
+    <color name="colorBlack">#FF000000</color>
     
     <color name="colorPurple">#7B1FA2</color>
     <color name="colorDarkBlue">#240745</color>
@@ -27,5 +29,7 @@
     <color name="color_e">#FFFF366F</color>
     <color name="color_f">#FFFB6546</color>
     <color name="color_g">#FF832AFF</color>
+    <color name="colorBluebg">#00356B</color>
+    <color name="colorPostItem">#80000000</color>
 </resources>
 

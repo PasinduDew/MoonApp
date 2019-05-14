@@ -1,17 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sliding_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="bottom"
     tools:context=".ViewImageActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    app:umanoPanelHeight="25dp"
+    app:umanoShadowHeight="50dp"
+    
+    app:umanoOverlay="true">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:background="@color/colorDeepBluishBlack"
-        android:scaleType="fitCenter"
-        />
+        android:orientation="vertical"
+        >
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorBluebg"
+            android:orientation="horizontal"
+            android:elevation="20dp"
+            android:outlineSpotShadowColor="@color/colorBlack"
+            android:outlineAmbientShadowColor="@color/colorBlack"
+            android:theme="@style/Widget.AppCompat.ActionBar"
+            ></LinearLayout>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/pvImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:background="@color/colorPostItem"
+        android:layout_marginTop="50dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textSize="50sp"
+            android:textColor="@color/colorTextIcons"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ayubowan"
+            android:background="@color/colorTextIcons"
+            android:textColor="@color/colorBlack"
+            android:onClick="test"/>
+    </LinearLayout>
+
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

@@ -9,6 +9,8 @@ public class DataModel {
         return imgURL;
     }
 
+
+
     public void setImgURL(String imgURL){
         this.imgURL = imgURL;
     }

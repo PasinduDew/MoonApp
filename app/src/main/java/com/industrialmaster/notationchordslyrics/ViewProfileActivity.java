@@ -28,16 +28,23 @@ public class ViewProfileActivity extends AppCompatActivity {
     private CircularNetworkImageView nivProfPic;
     private ImageLoader mImageLoader;
 
+    ImageView btnBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sharedPref = new SharedPref(getApplicationContext());
+        btnBack = (ImageView) findViewById(R.id.btnBack);
+
+
+
+
 
         if (sharedPref.getAuth()){
 
             setContentView(R.layout.activity_view_profile);
-            Toolbar toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
+//            Toolbar toolbar = findViewById(R.id.toolbar);
+//            setSupportActionBar(toolbar);
 
             FloatingActionButton fab = findViewById(R.id.fabEditProfile);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +92,11 @@ public class ViewProfileActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    public  void back(View v){
+
+        onBackPressed();
     }
 
     @Override
