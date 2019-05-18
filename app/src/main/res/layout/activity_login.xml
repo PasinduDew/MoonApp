@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical"
-    android:background="@drawable/layoutbgb"
+    android:background="@drawable/layoutbgnew"
     >
 
     <!--<ImageView-->
@@ -159,7 +159,7 @@
         android:textSize="20sp"
         android:elevation="20dp"
         android:text="@string/login"
-        android:textColor="@color/colorPurple"
+        android:textColor="@color/colorBlack"
         android:onClick="login"
 
         />

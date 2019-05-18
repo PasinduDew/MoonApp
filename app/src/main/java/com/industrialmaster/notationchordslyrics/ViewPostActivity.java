@@ -1,5 +1,7 @@
 package com.industrialmaster.notationchordslyrics;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -68,6 +70,8 @@ public class ViewPostActivity extends AppCompatActivity {
 
     AnimationDrawable anim;
 
+    static ProgressDialog mProgressDialog;
+
 
 
     @Override
@@ -75,7 +79,10 @@ public class ViewPostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_post);
 
+        showSimpleProgressDialog(this, "","Enjoy Your Life With Music",false);
+
         fabViewPost = (FloatingActionButton) findViewById(R.id.fabEditPost);
+
 
 
 
@@ -108,6 +115,10 @@ public class ViewPostActivity extends AppCompatActivity {
         btnLike = (Button) findViewById(R.id.btnLike);
         btnDislike = (Button) findViewById(R.id.btnDisLike);
         btnAddToCollection = (Button) findViewById(R.id.btnAddToCollection);
+
+        btnLike.setEnabled(false);
+        btnDislike.setEnabled(false);
+
 
         anim = (AnimationDrawable) cnivContent.getDrawable();
 
@@ -191,8 +202,15 @@ public class ViewPostActivity extends AppCompatActivity {
 
                             }
                             else{
+                                tempLike = 0;
+                                tempDislike = 0;
+                                btnLiked = false;
+                                btnDisliked = false;
                                 operation = "insert";
                             }
+
+                            btnLike.setEnabled(true);
+                            btnDislike.setEnabled(true);
 
 //                            Toast.makeText(ViewPostActivity.this, "status " + result.getString("status"), Toast.LENGTH_SHORT).show();
 
@@ -260,6 +278,8 @@ public class ViewPostActivity extends AppCompatActivity {
                                 operationCollection = "insert";
                             }
 
+                            removeSimpleProgressDialog();
+
 //                            Toast.makeText(ViewPostActivity.this, "status " + result.getString("status"), Toast.LENGTH_SHORT).show();
 
                         }
@@ -320,6 +340,13 @@ public class ViewPostActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+    }
+
     public  void clickedAddToCollection(View v){
         if (btnState){
             btnAddToCollection.setBackgroundResource(R.drawable.ic_plus_b);
@@ -333,6 +360,46 @@ public class ViewPostActivity extends AppCompatActivity {
         }
 
         addToCollection();
+    }
+
+    public static void showSimpleProgressDialog(Context context, String title,
+                                                String msg, boolean isCancelable) {
+        try {
+            if (mProgressDialog == null) {
+                mProgressDialog = ProgressDialog.show(context, title, msg);
+                mProgressDialog.setCancelable(isCancelable);
+            }
+
+            if (!mProgressDialog.isShowing()) {
+                mProgressDialog.show();
+            }
+
+        } catch (IllegalArgumentException ie) {
+            ie.printStackTrace();
+        } catch (RuntimeException re) {
+            re.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeSimpleProgressDialog() {
+        try {
+            if (mProgressDialog != null) {
+                if (mProgressDialog.isShowing()) {
+                    mProgressDialog.dismiss();
+                    mProgressDialog = null;
+                }
+            }
+        } catch (IllegalArgumentException ie) {
+            ie.printStackTrace();
+
+        } catch (RuntimeException re) {
+            re.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void addToCollection(){

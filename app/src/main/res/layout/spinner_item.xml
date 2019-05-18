@@ -6,7 +6,7 @@
         android:id="@+id/tvSpinnerItem"
         android:maxLines="1"
         android:textSize="20sp"
-        android:background="@color/colorPurple"
+        android:background="@color/colorBluebg"
 
         android:padding="5dp"
         android:textColor="@color/colorTextIcons"

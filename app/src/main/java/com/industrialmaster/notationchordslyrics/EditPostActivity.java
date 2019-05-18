@@ -147,7 +147,7 @@ public class EditPostActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
 
-                                Toast.makeText(EditPostActivity.this, response, Toast.LENGTH_LONG).show();
+//                                Toast.makeText(EditPostActivity.this, response, Toast.LENGTH_LONG).show();
 //                                Snackbar.make(view1, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                                        .setAction("Action", null).show();
                                 Intent intent = new Intent(EditPostActivity.this, MainActivity.class);
@@ -254,7 +254,7 @@ public class EditPostActivity extends AppCompatActivity {
             imgname = String.format("id%ssn%san%scat%s", String.valueOf(sharedPref.getId()), etSongName.getText().toString(), etArtistName.getText().toString(), postCat.getSelectedItem().toString());
             imgname = imgname.replaceAll("\\s", "");
             jsonObject.put("name", imgname);
-            Toast.makeText(this, imgname, Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, imgname, Toast.LENGTH_LONG).show();
             //  Log.e("Image name", etxtUpload.getText().toString().trim());
             jsonObject.put("image", encodedImage);
             // jsonObject.put("aa", "aa");
@@ -269,7 +269,7 @@ public class EditPostActivity extends AppCompatActivity {
 
                         try {
                             final String message = jsonObject.getString("message");
-                            Toast.makeText(EditPostActivity.this, message, Toast.LENGTH_LONG).show();
+//                            Toast.makeText(EditPostActivity.this, message, Toast.LENGTH_LONG).show();
                             saveExtend();
                             rQueue.getCache().clear();
 
@@ -322,9 +322,8 @@ public class EditPostActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(EditPostActivity.this, response, Toast.LENGTH_LONG).show();
-//                            Intent intent = new Intent(AddPostActivity.this, MainActivity.class);
-//                            startActivity(intent);
+//                        Toast.makeText(EditPostActivity.this, response, Toast.LENGTH_LONG).show();
+                            onBackPressed();
                     }
 
                 },

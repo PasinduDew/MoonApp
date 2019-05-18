@@ -219,7 +219,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1.55"
         android:orientation="vertical"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
@@ -238,6 +238,7 @@
         <com.industrialmaster.notationchordslyrics.CustomNetworkImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
+
             android:background="@drawable/ic_plus"
             android:id="@+id/cnivAddImage"
             android:onClick="selectImg"
@@ -252,7 +253,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="1.15"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp">
 

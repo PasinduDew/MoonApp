@@ -4,11 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main"
     android:orientation="vertical"
-    android:background="@color/colorBluebg">
+    android:background="@color/colorBluebg"
+    tools:context=".MyPostsActivity">
+
+    <android.support.v7.widget.ActionMenuView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="50dp"
+        android:background="@color/colorBlack">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="My Posts"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </android.support.v7.widget.ActionMenuView>
 
     <ListView
         android:id="@+id/lvPosts"
@@ -35,4 +49,5 @@
             android:textSize="40sp"
             android:gravity="center"/>
     </LinearLayout>
+
 </LinearLayout>

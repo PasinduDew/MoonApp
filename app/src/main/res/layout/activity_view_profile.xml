@@ -41,12 +41,12 @@
 
     <include layout="@layout/content_view_profile" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabEditProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_edit_black_24dp" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fabEditProfile"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@drawable/ic_edit_black_24dp" />-->
 
 </android.support.design.widget.CoordinatorLayout>

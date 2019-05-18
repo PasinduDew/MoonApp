@@ -27,6 +27,25 @@ public class SharedPref {
         editor.commit();
     }
 
+    public void setUsername(String username){
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("username", username);
+
+
+    }
+
+    public void setEmail(String email){
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("email", email);
+
+
+    }
+
+
     public String getImageUrl(){
 
         return sharedPreferences.getString("imageurl", "null");
