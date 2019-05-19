@@ -83,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         @Override
                         public void onResponse(String response) {
-                            Toast.makeText(RegisterActivity.this, "Saved!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Welcome to Moon World", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intent);
                         }

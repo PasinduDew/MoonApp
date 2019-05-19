@@ -228,7 +228,7 @@ public class EditPostActivity extends AppCompatActivity {
 
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
                     cnivAdd.setLocalImageBitmap(bitmap);
-                    Toast.makeText(getApplication(), "Image Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplication(), "Image Selected", Toast.LENGTH_SHORT).show();
 
 
                 } catch (IOException e) {
@@ -241,7 +241,7 @@ public class EditPostActivity extends AppCompatActivity {
 
     private void uploadImage(Bitmap bitmap){
 
-        Toast.makeText(this, "Image Uploading....", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Image Uploading....", Toast.LENGTH_LONG).show();
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);

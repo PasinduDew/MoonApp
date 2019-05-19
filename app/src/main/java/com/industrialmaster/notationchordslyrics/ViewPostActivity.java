@@ -129,7 +129,7 @@ public class ViewPostActivity extends AppCompatActivity {
         tvNote.setText(note);
 
         if (category.equals("Notation")){
-            ivCategory.setImageResource(R.drawable.notaion_svg);
+            ivCategory.setImageResource(R.drawable.notation);
         }
         else if (category.equals("Chords")){
             ivCategory.setImageResource(R.drawable.chords);

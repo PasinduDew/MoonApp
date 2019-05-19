@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         @Override
                         public void onResponse(String response) {
-                            Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
                             try{
                                 JSONObject user = new JSONObject(response);
                                 if(user.getBoolean("auth")){
@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
 //                                    Toast.makeText(LoginActivity.this, "Inside JSON", Toast.LENGTH_SHORT).show();
 
                                     sharedPref.saveLoginDetails(user.getInt("id"), user.getString("username"), email, user.getBoolean("auth"), user.getBoolean("imageValid"), user.getString("imageurl"));
-                                    Toast.makeText(LoginActivity.this, sharedPref.getUsername(), Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(LoginActivity.this, sharedPref.getUsername(), Toast.LENGTH_SHORT).show();
                                     if (sharedPref.getAuth()){
                                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                         startActivity(intent);

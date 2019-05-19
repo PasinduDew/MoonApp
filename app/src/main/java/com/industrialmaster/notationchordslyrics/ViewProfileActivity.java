@@ -111,7 +111,7 @@ public class ViewProfileActivity extends AppCompatActivity {
                 mImageLoader.get(url, new ImageLoader.ImageListener() {
                     @Override
                     public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
-                        Toast.makeText(ViewProfileActivity.this, "I`m Here", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(ViewProfileActivity.this, "I`m Here", Toast.LENGTH_SHORT).show();
                         bitmap = response.getBitmap();
                         nivProfPic.setImageBitmap(bitmap);
 //                        nivProfPic.setBackgroundResource(0);
@@ -160,7 +160,7 @@ public class ViewProfileActivity extends AppCompatActivity {
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
 
                     nivProfPic.setImageBitmap(bitmap);
-                    Toast.makeText(getApplication(), "Image Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplication(), "Image Selected", Toast.LENGTH_SHORT).show();
 
 
                 } catch (IOException e) {

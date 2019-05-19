@@ -26,7 +26,7 @@
             android:layout_width="70dp"
             android:layout_height="74dp"
 
-            android:background="@color/color_c"
+            android:background="@color/colorBlack"
 
             />
 
@@ -60,12 +60,22 @@
                 />
 
 
+
+
         </LinearLayout>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:orientation="vertical"
         android:layout_weight="1">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorDivider"></View>
+
 
         <com.industrialmaster.notationchordslyrics.CustomNetworkImageView
             android:id="@+id/cnivContent"
@@ -86,12 +96,19 @@
         android:layout_weight="0.5"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorDivider"></View>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:orientation="horizontal"
             >
+
+
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -141,7 +158,7 @@
                     android:text="0"
                     android:textSize="20sp"
                     android:background="@drawable/roundpic"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -168,7 +185,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="55dp"
                     android:onClick="clickedAddToCollection"
 
                     android:background="@drawable/ic_plus_b"/>
@@ -186,9 +203,15 @@
             android:layout_weight="0.7"
             android:orientation="vertical">
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorDivider"></View>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp">
 
                 <TextView
 

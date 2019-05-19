@@ -168,7 +168,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
 
-                                Toast.makeText(EditProfileActivity.this, response, Toast.LENGTH_LONG).show();
+                                Toast.makeText(EditProfileActivity.this, "Updated Successfully", Toast.LENGTH_LONG).show();
 //                                Snackbar.make(view1, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                                        .setAction("Action", null).show();
                         llPassConf.setVisibility(View.GONE);

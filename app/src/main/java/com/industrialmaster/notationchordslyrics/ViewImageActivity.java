@@ -58,6 +58,6 @@ public class ViewImageActivity extends AppCompatActivity {
 
     public void test(View v){
 
-        Toast.makeText(this, "Ayubowan", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Ayubowan", Toast.LENGTH_SHORT).show();
     }
 }

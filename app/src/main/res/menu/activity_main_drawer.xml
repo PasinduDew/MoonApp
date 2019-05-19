@@ -38,21 +38,21 @@
             android:enabled="true"/>
     </group>
 
-    <item android:title="Customize">
-        <menu>
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_settings_work_tool"
-                android:title="Settings" />
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share App" />
-            <item
-                android:id="@+id/nav_aboutme"
-                android:icon="@drawable/ic_menu_send"
-                android:title="About Me" />
-        </menu>
-    </item>
+    <!--<item android:title="Customize">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_settings"-->
+                <!--android:icon="@drawable/ic_settings_work_tool"-->
+                <!--android:title="Settings" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share App" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_aboutme"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="About Me" />-->
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

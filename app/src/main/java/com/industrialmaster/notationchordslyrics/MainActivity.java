@@ -510,7 +510,7 @@ public class MainActivity extends AppCompatActivity
 
         String url = "http://pasindud.tk/myapp/posts/collection.php";
 
-        showSimpleProgressDialog(this, "Loading...","Fetching Json",false);
+        showSimpleProgressDialog(this, "","Loading....",false);
 
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
@@ -628,7 +628,7 @@ public class MainActivity extends AppCompatActivity
 
         String url = "http://pasindud.tk/myapp/posts/notations.php";
 
-        showSimpleProgressDialog(this, "Loading...","Fetching Json",false);
+        showSimpleProgressDialog(this, "","Loading....",false);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -734,7 +734,7 @@ public class MainActivity extends AppCompatActivity
 
         String url = "http://pasindud.tk/myapp/posts/chords.php";
 
-        showSimpleProgressDialog(this, "Loading...","Fetching Json",false);
+        showSimpleProgressDialog(this, "","Loading...",false);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -840,7 +840,7 @@ public class MainActivity extends AppCompatActivity
 
         String url = "http://pasindud.tk/myapp/posts/lyrics.php";
 
-        showSimpleProgressDialog(this, "Loading...","Fetching Json",false);
+        showSimpleProgressDialog(this, "","Loading...",false);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -1148,14 +1148,6 @@ public class MainActivity extends AppCompatActivity
             llEmpty = (LinearLayout) findViewById(R.id.llEmptyNote);
             llEmpty.setVisibility(View.GONE);
             onResume();
-
-        } else if (id == R.id.nav_settings) {
-
-        }
-        else if (id == R.id.nav_share) {
-
-        }
-        else if (id == R.id.nav_aboutme) {
 
         }
         else if (id == R.id.nav_logout){
