@@ -15,56 +15,66 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.55"
         android:orientation="vertical"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+        android:background="@color/colorPostItem"
 
         >
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Song Name"
-            android:textColor="@color/colorTextIcons"
+            android:orientation="vertical"
+            >
 
-            android:gravity="bottom"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Song Name"
+                android:textColor="@color/colorTextIcons"
 
-            android:textSize="15sp"
-            />
+                android:gravity="bottom"
 
-        <EditText
-            android:id="@+id/etSongName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="0dp"
-            android:background="@null"
-            android:elevation="10dp"
-            android:gravity="top"
-            android:hint="Desa Piyagath kala"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@color/colorTextIcons"
-            android:textColorHint="#bdc2cc"
-            android:textSize="20sp"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/etSongName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:background="@null"
+                android:elevation="10dp"
+                android:gravity="top"
+                android:hint="Song Name"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorTextIcons"
+                android:textColorHint="#bdc2cc"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
 
 
-            />
+                />
+        </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.75dp"
-            android:background="@color/colorDivider"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            ></View>
+
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"
+
+        ></View>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -72,52 +82,65 @@
         android:orientation="vertical"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="5dp"
+
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPostItem"
 
         >
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Artist"
-            android:textColor="@color/colorTextIcons"
+            android:orientation="vertical">
 
-            android:gravity="bottom"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Artist"
+                android:textColor="@color/colorTextIcons"
 
-            android:textSize="15sp"
-            />
+                android:gravity="bottom"
 
-        <EditText
-            android:id="@+id/etArtist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:layout_margin="0dp"
-            android:elevation="10dp"
-            android:hint="Clarence Wijewardhena"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@color/colorTextIcons"
-            android:textColorHint="#bdc2cc"
-            android:textSize="20sp"
-            android:gravity="top"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/etArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_margin="0dp"
+                android:elevation="10dp"
+                android:hint="Artist"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorTextIcons"
+                android:textColorHint="#bdc2cc"
+                android:textSize="20sp"
+                android:gravity="top"
 
 
 
-            />
+                />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.75dp"
-            android:background="@color/colorDivider"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            ></View>
+
+        </LinearLayout>
+
+
+
+
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"
+
+        ></View>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -126,123 +149,158 @@
         android:orientation="vertical"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
 
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+        android:background="@color/colorPostItem"
 
         >
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Post Category"
-            android:textColor="@color/colorTextIcons"
+            android:orientation="vertical">
 
-            android:gravity="bottom"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Post Category"
+                android:textColor="@color/colorTextIcons"
 
-            android:textSize="15sp"
-            />
+                android:gravity="bottom"
 
-        <Spinner
-            android:id="@+id/spPostCat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+                android:textSize="15sp"
+                />
+
+            <Spinner
+                android:id="@+id/spPostCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
 
 
 
-            ></Spinner>
+                ></Spinner>
+
+
+        </LinearLayout>
+
+
 
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"
+
+        ></View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+        android:background="@color/colorPostItem"
 
         >
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Note"
-            android:textColor="@color/colorTextIcons"
+            android:orientation="vertical">
 
-            android:gravity="bottom"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Note"
+                android:textColor="@color/colorTextIcons"
+                android:gravity="bottom"
 
-            android:textSize="15sp"
-            />
+                android:textSize="15sp"
+                />
 
-        <EditText
-            android:id="@+id/etNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:layout_margin="0dp"
-            android:elevation="10dp"
-            android:hint="A simple Note Regarding Your Post"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@color/colorTextIcons"
-            android:textColorHint="#bdc2cc"
-            android:textSize="20sp"
-            android:gravity="top"
-            android:singleLine="false"
-            android:lines="3"
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_margin="0dp"
+                android:elevation="10dp"
+                android:hint="A simple Note Regarding Your Post"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorTextIcons"
+                android:textColorHint="#bdc2cc"
+                android:textSize="20sp"
+                android:gravity="top"
+                android:singleLine="false"
+                android:lines="3"
 
 
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.75dp"
-            android:background="@color/colorDivider"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            ></View>
+                />
+
+
+        </LinearLayout>
+
+
+
 
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"
+
+        ></View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.55"
+        android:layout_weight="1.6"
         android:orientation="vertical"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPostItem"
         >
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add a Clear Photo of Your Content"
-            android:textColor="@color/colorTextIcons"
-            android:textSize="15sp"
-            android:gravity="center"
-            android:layout_margin="5dp"/>
+            android:orientation="vertical">
 
-        <com.industrialmaster.notationchordslyrics.CustomNetworkImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add a Clear Photo of Your Content"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_margin="5dp"/>
 
-            android:background="@drawable/ic_plus"
-            android:id="@+id/cnivAddImage"
-            android:onClick="selectImg"
-            android:layout_gravity="center"/>
+            <com.industrialmaster.notationchordslyrics.CustomNetworkImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:background="@drawable/ic_plus"
+                android:id="@+id/cnivAddImage"
+                android:onClick="selectImg"
+                android:layout_gravity="center"/>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -253,7 +311,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.15"
+        android:layout_weight="0.8"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp">
 
@@ -261,9 +319,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="25dp"
-
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
             android:background="@drawable/btnround"
             android:textSize="20sp"
             android:elevation="20dp"

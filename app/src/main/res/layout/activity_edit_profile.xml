@@ -6,7 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".EditProfileActivity"
     android:orientation="vertical"
-    android:background="@color/colorTextIcons">
+    android:background="@color/colorBluebg">
+    <android.support.v7.widget.ActionMenuView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBlack"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="@color/colorTextIcons"
+            android:text="Edit"
+            android:gravity="center"/>
+    </android.support.v7.widget.ActionMenuView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +54,7 @@
 
                 android:gravity="center_vertical"
                 android:text="My Posts"
-                android:textColor="@color/colorBluebg"
+                android:textColor="@color/colorTextIcons"
                 android:textSize="25sp" />
 
             <LinearLayout
@@ -69,7 +83,7 @@
                     android:layout_marginLeft="10dp"
                     android:password="true"
                     android:gravity="center_vertical"
-                    android:textColor="@color/colorBluebg"
+                    android:textColor="@color/colorTextIcons"
                     android:textSize="25sp"
                     />
 
@@ -101,7 +115,7 @@
                     android:layout_marginLeft="10dp"
                     android:password="true"
                     android:gravity="center_vertical"
-                    android:textColor="@color/colorBluebg"
+                    android:textColor="@color/colorTextIcons"
                     android:textSize="25sp"
                     />
 
@@ -128,11 +142,11 @@
             android:layout_marginRight="50dp"
             android:layout_marginBottom="20dp"
             android:layout_weight="0.2"
-            android:background="@drawable/btnroundbb"
+            android:background="@drawable/btnroundwhite"
             android:elevation="20dp"
             android:onClick="saveChanges"
             android:text="@string/lblSaveChanges"
-            android:textColor="@color/colorBluebg"
+            android:textColor="@color/colorBlack"
             android:textSize="20sp"
 
             />

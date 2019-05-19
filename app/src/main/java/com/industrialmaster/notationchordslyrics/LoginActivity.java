@@ -1,5 +1,7 @@
 package com.industrialmaster.notationchordslyrics;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,6 +28,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
 
     SharedPref sharedPref;
+    private static ProgressDialog mProgressDialog;
 
 
     @Override
@@ -64,6 +67,8 @@ public class LoginActivity extends AppCompatActivity {
         }
         else{
 
+            showSimpleProgressDialog(this, "","Loading...",false);
+
             RequestQueue queue = Volley.newRequestQueue(this);
 
             final String email = etEmail.getText().toString();
@@ -90,10 +95,15 @@ public class LoginActivity extends AppCompatActivity {
                                     sharedPref.saveLoginDetails(user.getInt("id"), user.getString("username"), email, user.getBoolean("auth"), user.getBoolean("imageValid"), user.getString("imageurl"));
 //                                    Toast.makeText(LoginActivity.this, sharedPref.getUsername(), Toast.LENGTH_SHORT).show();
                                     if (sharedPref.getAuth()){
+                                        removeSimpleProgressDialog();
                                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                         startActivity(intent);
                                     }
 
+                                }
+                                else{
+                                    removeSimpleProgressDialog();
+                                    Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                                 }
                             }
                             catch (Exception e){
@@ -107,6 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
+                            removeSimpleProgressDialog();
                             Toast.makeText(LoginActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -127,6 +138,46 @@ public class LoginActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    public static void removeSimpleProgressDialog() {
+        try {
+            if (mProgressDialog != null) {
+                if (mProgressDialog.isShowing()) {
+                    mProgressDialog.dismiss();
+                    mProgressDialog = null;
+                }
+            }
+        } catch (IllegalArgumentException ie) {
+            ie.printStackTrace();
+
+        } catch (RuntimeException re) {
+            re.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void showSimpleProgressDialog(Context context, String title,
+                                                String msg, boolean isCancelable) {
+        try {
+            if (mProgressDialog == null) {
+                mProgressDialog = ProgressDialog.show(context, title, msg);
+                mProgressDialog.setCancelable(isCancelable);
+            }
+
+            if (!mProgressDialog.isShowing()) {
+                mProgressDialog.show();
+            }
+
+        } catch (IllegalArgumentException ie) {
+            ie.printStackTrace();
+        } catch (RuntimeException re) {
+            re.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

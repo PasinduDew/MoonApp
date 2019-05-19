@@ -39,7 +39,9 @@
         <activity
             android:name=".AddPostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EditProfileActivity" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ViewProfileActivity"
             android:label="@string/title_activity_view_profile"
